@@ -7,25 +7,22 @@
     "bootstrap": "4.2.1",
     "jsnes": "git://github.com/bfirsh/jsnes.git",
     "node-sass": "^4.11.0",
-    "npm": "^6.9.0",
     "prop-types": "^15.6.2",
     "raven-js": "^3.27.0",
-    "react": "^16.8.6",
+    "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-ga": "^2.5.7",
     "react-router-dom": "^4.4.0",
     "reactstrap": "^7.1.0",
-    "ringbufferjs": "^1.1.0",
-    "start": "^5.1.0",
-    "yarn": "^1.15.2"
+    "ringbufferjs": "^1.1.0"
   },
   "devDependencies": {
     "canvas": "^2.4.0",
     "prettier": "^1.16.4",
     "prettier-check": "^2.0.0",
-    "react-scripts": "^2.1.8"
+    "react-scripts": "2.1.5"
   },
-  "scripts": {
+    "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "prettier-check src/**/*.js && react-scripts test",
@@ -37,19 +34,6 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ],
-  "description": "A React-based web UI for [JSNES](https://github.com/bfirsh/jsnes).",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/bfirsh/jsnes-web.git"
-  },
-  "keywords": [
-    "nesemulator"
-  ],
-  "author": "bfirsh",
-  "bugs": {
-    "url": "https://github.com/bfirsh/jsnes-web/issues"
-  },
-  "homepage": "https://github.com/bfirsh/jsnes-web#readme"
+  ]
 }
+
