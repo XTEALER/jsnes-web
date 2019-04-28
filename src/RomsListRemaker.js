@@ -20,44 +20,37 @@ const romsfolder = "../roms/";
 const extraroms = "./public/roms";
 const fs = require("fs");
 const config = {
-  ROMS: {},
-  GOOGLE_ANALYTICS_CODE: "process.env.REACT_APP_GOOGLE_ANALYTICS_CODE",
-  SENTRY_URI: "process.env.REACT_APP_SENTRY_URI"
+  ROMS: {}
 };
 var x = 0;
 
 //  WRITES MODIFIED OBJECT TO FILE
-var writeromslist = function(data) {
-  this.data = data;
-  fs.writeFile(
-    "./src/configNew.js",
-    "const config = " + this.data + ";",
-    function(err, data) {
-      if (err) console.log(err);
-      console.log(this.data);
-    }
-  );
+var writeromslist = function () {
+  fs.writeFile("./src/configNew.js", JSON.stringify(config.ROMS, false, 2), function (err, data) {
+    if (err) console.log(err);
+  });
+  console.log(config.ROMS);
 };
 
 // CREATES NEW PROPERTIES INSIDE OBJECT
-var addroms = function(rom) {
+var addroms = function (rom) {
   for (x in rom) {
-    romName = "rom-" + rom[x];
+    romName = rom[x].split(".nes").shift();
     config.ROMS[romName] = {
-      name: rom[x],
+      name: romName,
       url: romsfolder + rom[x]
     };
   }
 };
 
 // READS ROMS FOLDER AND CREATES A LIST OF ITS CONTENTS
-var makeromslist = function() {
+var makeromslist = function () {
   fs.readdir(extraroms, (e, rom) => {
     if (e !== null) {
       console.log(e);
     } else {
       addroms(rom);
-      writeromslist(JSON.stringify(config, false, ""));
+      writeromslist();
     }
   });
 };
