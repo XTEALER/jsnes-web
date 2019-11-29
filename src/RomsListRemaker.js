@@ -17,7 +17,7 @@
 */
 
 const romsfolder = "../roms/";
-const extraroms = "./public/roms";
+const extraroms = "../public/roms";
 const fs = require("fs");
 const config = {
   ROMS: {}
@@ -25,15 +25,19 @@ const config = {
 var x = 0;
 
 //  WRITES MODIFIED OBJECT TO FILE
-var writeromslist = function () {
-  fs.writeFile("./src/configNew.js", JSON.stringify(config.ROMS, false, 2), function (err, data) {
-    if (err) console.log(err);
-  });
+var writeromslist = function() {
+  fs.writeFile(
+    "./configNew.js",
+    JSON.stringify(config.ROMS, false, 2),
+    function(err, data) {
+      if (err) console.log(err);
+    }
+  );
   console.log(config.ROMS);
 };
 
 // CREATES NEW PROPERTIES INSIDE OBJECT
-var addroms = function (rom) {
+var addroms = function(rom) {
   for (x in rom) {
     romName = rom[x].split(".nes").shift();
     config.ROMS[romName] = {
@@ -44,7 +48,7 @@ var addroms = function (rom) {
 };
 
 // READS ROMS FOLDER AND CREATES A LIST OF ITS CONTENTS
-var makeromslist = function () {
+var makeromslist = function() {
   fs.readdir(extraroms, (e, rom) => {
     if (e !== null) {
       console.log(e);
