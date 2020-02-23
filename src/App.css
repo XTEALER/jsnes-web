@@ -2,3 +2,8 @@
 .modal-dialog {
   font-family: Menlo, monospace;
 }
+
+a:hover {
+  color: #000 !important;
+  background-color: #fff;
+}

@@ -1,33 +1,40 @@
 {
-	"name": "jsnes-web",
-	"version": "0.1.0",
-	"license": "Apache-2.0",
-	"private": true,
-	"dependencies": {
-		"bootstrap": "4.2.1",
-		"node-sass": "^4.11.0",
-		"prop-types": "^15.6.2",
-		"react": "^16.8.6",
-		"react-dom": "^16.7.0",
-		"jsnes": "git://github.com/bfirsh/jsnes.git",
-		"react-router-dom": "^5.1.2",
-		"reactstrap": "^7.1.0",
-		"ringbufferjs": "^1.1.0",
-		"start": "^5.1.0"
-	},
-	"devDependencies": {
-		"canvas": "^2.4.0",
-		"prettier": "^1.16.4",
-		"prettier-check": "^2.0.0",
-		"react-scripts": "^3.2.0"
-	},
-	"scripts": {
-		"start": "react-scripts start",
-		"build": "react-scripts build",
-		"test": "prettier-check src/**/*.js && react-scripts test",
-		"eject": "react-scripts eject",
-		"format": "prettier --write src/**/*.js"
-	},
-	"browserslist": [ ">0.2%", "not dead", "not ie <= 11", "not op_mini all" ],
-	"main": "index.js"
+  "name": "jsnes-web",
+  "version": "0.1.0",
+  "license": "Apache-2.0",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "jsnes": "git://github.com/bfirsh/jsnes.git",
+    "node-sass": "^4.13.1",
+    "prop-types": "^15.6.2",
+    "raven-js": "^3.27.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.7.0",
+    "react-router-dom": "^5.1.2",
+    "reactstrap": "^7.1.0",
+    "ringbufferjs": "^1.1.0",
+    "start": "^5.1.0"
+  },
+  "devDependencies": {
+    "canvas": "^2.4.0",
+    "prettier": "^1.16.4",
+    "prettier-check": "^2.0.0",
+    "react-scripts": "^3.4.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "prettier-check src/**/*.js && react-scripts test",
+    "eject": "react-scripts eject",
+    "format": "prettier --write src/**/*.js"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "main": "index.js",
+  "homepage": "https://xtealer.github.io/nes"
 }
